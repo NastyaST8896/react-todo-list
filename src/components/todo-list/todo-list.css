@@ -1,0 +1,12 @@
+.todo-list {
+    margin-top: 20px;
+    padding: 32px;
+    text-align: center;
+    background-color: cadetblue;
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px #213547;
+}
+
+.title {
+    font-size: 50px;
+}
