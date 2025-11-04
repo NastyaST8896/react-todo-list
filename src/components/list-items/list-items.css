@@ -1,0 +1,84 @@
+.list {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #c1dfdf;
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+.item-content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox, .checkbox:disabled {
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-color: #96C0C1FF;
+    box-shadow: 2px 2px 4px #213547;
+}
+
+.checkbox:hover {
+    background-color: #c1dfdf;
+    border-color: #96C0C1FF;
+}
+.checkbox:checked {
+    background-color: #c1dfdf;
+    border-color: #96C0C1FF;
+    box-shadow: 1px 1px 2px #213547;
+    background-image: url("../../img/checkmark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item-actions {
+    max-width: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btn {
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-color: #96C0C1FF;
+    cursor: pointer;
+    transition: box-shadow 0.4s;
+    box-shadow: 2px 2px 4px #213547;
+    padding: 6px;
+}
+
+.btn:hover {
+    box-shadow: 4px 4px 2px #213547;
+    .pencil-icon, .trash-icon{
+        fill: rgba(33, 53, 71, 0.70);
+    }
+}
+.btn:active {
+    box-shadow: 2px 2px 4px #213547;
+}
+
+.pencil-icon, .trash-icon {
+    display: block;
+}
+
+.pencil-icon:active, .trash-icon:active {
+        fill: #21354799;
+    }

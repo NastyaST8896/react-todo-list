@@ -6,13 +6,19 @@ import ListItems from '../list-items/list-items.jsx';
 
 const TodoList = () => {
     const [todos, setTodos] = useState([
-        { id: 1, text: 'колла', completed: false },
+        { id: 1, text: 'колла1', completed: false },
+        { id: 2, text: 'колла2', completed: false },
+        { id: 3, text: 'колла3', completed: false },
+        { id: 4, text: 'колла4', completed: false },
+        { id: 5, text: 'колла5', completed: false },
+        { id: 6, text: 'колла6', completed: false },
     ]);
 
     const createTodo = (newTodo) => {
         setTodos([...todos, newTodo]);
-        console.log(todos);
     };
+
+    const deleteTodo = (todo) => setTodos(todos.filter((item) => item.id !== todo));
 
     return (
         <div className="todo-list">
@@ -20,7 +26,7 @@ const TodoList = () => {
 
             <AddInput create={ createTodo } />
 
-            <ListItems />
+            <ListItems todos={ todos } onDelete={ deleteTodo } />
         </div>
     );
 };
