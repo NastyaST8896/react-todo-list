@@ -10,3 +10,30 @@
 .title {
     font-size: 50px;
 }
+
+.list-controls {
+    display: flex;
+    gap: 30px;
+}
+
+.all-checked-btn {
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding: 5px;
+    background-color: #96C0C1FF;
+    cursor: pointer;
+    transition: box-shadow 0.4s;
+    box-shadow: 2px 2px 4px #213547;
+}
+
+.all-checked-btn:hover {
+    box-shadow: 4px 4px 2px #213547;
+}
+
+.all-checked-btn:active {
+    box-shadow: 2px 2px 4px #213547;
+}
+
+.all-checked-icon {
+    display: block;
+}

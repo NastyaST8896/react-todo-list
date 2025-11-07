@@ -3,28 +3,33 @@ import './list-items.css';
 import { TrashIcon, PencilIcon } from '../icons/index.js';
 import Modal from '../modal/modal.jsx';
 
-const ListItems = ({ todos, onDelete, onEdit }) => {
+const ListItems = ({ filteredTodos, onDelete, onEdit, onChecked }) => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const [currentId, setCurrentId] = useState(null);
+    const [currentTodo, setCurrentTodo] = useState(null);
 
-    const handleEditClick = (id) => {
-        setCurrentId(id);
+    const handleCompleted = (todo) => {
+        todo.completed = !todo.completed;
+        onChecked(todo.id, todo.completed)
+    }
+
+    const handleEditClick = (todo) => {
+        setCurrentTodo(todo);
         setIsOpen(true);
     };
 
     return (
         <>
             <ul className="list">
-                { todos.map((todo, index) => (
+                { filteredTodos.map((todo, index) => (
                     <li className="item" key={ todo.id }>
                         <div className="item-content">
-                            <input className="checkbox" type="checkbox" />
-                            <span>{ index + 1 }. { todo.text }</span>
+                            <input id={"checkbox-" + `${todo.id}`} className="checkbox" type="checkbox" checked={todo.completed} onChange={() => handleCompleted(todo)} />
+                            <label htmlFor={"checkbox-" + `${todo.id}`} >{ index + 1 }. { todo.text }</label>
                         </div>
 
                         <div className="item-actions">
-                            <button className="btn" onClick={ () => handleEditClick(todo.id) }>
+                            <button className="btn" onClick={ () => handleEditClick(todo) }>
                                 <PencilIcon className="pencil-icon" />
                             </button>
                             <button className="btn" onClick={ () => onDelete(todo.id) }>
@@ -39,7 +44,7 @@ const ListItems = ({ todos, onDelete, onEdit }) => {
                 <Modal
                     onClose={ () => setIsOpen(false) }
                     onAccept={ onEdit }
-                    todoId={ currentId }
+                    todo={ currentTodo }
                 />
             ) }
         </>

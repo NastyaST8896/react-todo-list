@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './add-new-todo.css';
+import './add-input.css';
 
 const AddInput = ({ create }) => {
     const [inputValue, setInputValue] = useState('');
