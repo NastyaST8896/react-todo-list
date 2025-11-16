@@ -50,10 +50,8 @@
 }
 
 .clear-completed:active {
-background-color: #c1dfdf;
+    background-color: #c1dfdf;
 }
-
-
 
 .filters {
     display: flex;

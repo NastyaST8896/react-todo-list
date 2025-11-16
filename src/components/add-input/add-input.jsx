@@ -10,21 +10,14 @@ const AddInput = ({ create }) => {
         inputRef.current.focus();
     }, []);
 
-    const newTodoAdd = () => {
-
-        if (inputValue.trim() !== '') {
-            const newTodo = {
-                text: inputValue,
-                completed: false,
-                id: Date.now(),
-            };
-
-            create(newTodo);
-        }
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const trimmedValue = inputValue.trim();
+
+        if (trimmedValue !== '') {
+            create(trimmedValue);
+        }
         setInputValue('');
     };
 
@@ -40,7 +33,7 @@ const AddInput = ({ create }) => {
                 ref={ inputRef }
             />
 
-            <button className="add-btn" onClick={ newTodoAdd }>Add</button>
+            <button className="add-btn">Add</button>
         </form>
     );
 };

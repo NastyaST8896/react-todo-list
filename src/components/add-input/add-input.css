@@ -20,12 +20,12 @@
     transition: box-shadow 0.4s;
     color: #213547;
     box-shadow: 2px 2px 4px #213547;
-
 }
 
 .add-btn:hover {
     box-shadow: 4px 4px 2px #213547;
 }
+
 .add-btn:active {
     box-shadow: 2px 2px 4px #213547;
 }

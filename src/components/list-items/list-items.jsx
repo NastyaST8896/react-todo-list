@@ -10,8 +10,8 @@ const ListItems = ({ filteredTodos, onDelete, onEdit, onChecked }) => {
 
     const handleCompleted = (todo) => {
         todo.completed = !todo.completed;
-        onChecked(todo.id, todo.completed)
-    }
+        onChecked(todo.id, todo.completed);
+    };
 
     const handleEditClick = (todo) => {
         setCurrentTodo(todo);
@@ -24,8 +24,11 @@ const ListItems = ({ filteredTodos, onDelete, onEdit, onChecked }) => {
                 { filteredTodos.map((todo, index) => (
                     <li className="item" key={ todo.id }>
                         <div className="item-content">
-                            <input id={"checkbox-" + `${todo.id}`} className="checkbox" type="checkbox" checked={todo.completed} onChange={() => handleCompleted(todo)} />
-                            <label htmlFor={"checkbox-" + `${todo.id}`} >{ index + 1 }. { todo.text }</label>
+                            <input id={ 'checkbox-' + `${ todo.id }` }
+                                   className="checkbox" type="checkbox"
+                                   checked={ todo.completed }
+                                   onChange={ () => handleCompleted(todo) } />
+                            <label htmlFor={ 'checkbox-' + `${ todo.id }` }>{ index + 1 }. { todo.text }</label>
                         </div>
 
                         <div className="item-actions">

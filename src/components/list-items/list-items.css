@@ -2,7 +2,6 @@
     margin: 20px 0;
     list-style-type: none;
     padding: 0;
-
 }
 
 .item {
@@ -13,7 +12,6 @@
     margin-bottom: 10px;
     background-color: #c1dfdf;
     border-radius: 10px;
-
     font-size: 20px;
 }
 
@@ -39,6 +37,7 @@
     background-color: #c1dfdf;
     border-color: #96C0C1FF;
 }
+
 .checkbox:checked {
     background-color: #c1dfdf;
     border-color: #96C0C1FF;
@@ -68,10 +67,12 @@
 
 .btn:hover {
     box-shadow: 4px 4px 2px #213547;
-    .pencil-icon, .trash-icon{
+
+    .pencil-icon, .trash-icon {
         fill: rgba(33, 53, 71, 0.70);
     }
 }
+
 .btn:active {
     box-shadow: 2px 2px 4px #213547;
 }
@@ -81,5 +82,5 @@
 }
 
 .pencil-icon:active, .trash-icon:active {
-        fill: #21354799;
-    }
+    fill: #21354799;
+}

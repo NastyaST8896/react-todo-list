@@ -4,7 +4,7 @@ export const AllCheckedIcon = props => (
         height="30px"
         viewBox="0 -5.5 24 24"
         fill="#213547"
-        {...props}
+        { ...props }
     >
         <path
             fillRule="evenodd"

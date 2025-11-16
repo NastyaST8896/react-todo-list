@@ -6,7 +6,7 @@ import { CrossIcon } from '../icons/index.js';
 
 const Modal = ({ onClose, onAccept, todo }) => {
 
-    const [inputValue, setInputValue] = useState(`${todo.text}`);
+    const [inputValue, setInputValue] = useState(`${ todo.text }`);
 
     const handleInputChange = (e) => setInputValue(e.target.value);
 
@@ -35,7 +35,7 @@ const Modal = ({ onClose, onAccept, todo }) => {
 
     return ReactDom.createPortal(
         <>
-            <div className="modal-overlay" onClick={ onClose }/>
+            <div className="modal-overlay" onClick={ onClose } />
 
             <form className="modal" onSubmit={ handleSubmit }>
                 <div className="modal-content">
@@ -43,12 +43,17 @@ const Modal = ({ onClose, onAccept, todo }) => {
                     <div className="modal-header">
                         <h1>Edit Todo</h1>
 
-                        <button className="exit-btn" type="button" onClick={onClose}><CrossIcon className="cross-icon" /></button>
+                        <button className="exit-btn"
+                                type="button"
+                                onClick={ onClose }><CrossIcon
+                            className="cross-icon"
+                        />
+                        </button>
                     </div>
 
                     <input
                         className="change-input"
-                        value={inputValue}
+                        value={ inputValue }
                         onChange={ handleInputChange }
                         type="text"
                     />

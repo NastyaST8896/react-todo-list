@@ -1,8 +1,8 @@
 .modal {
     position: fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #5F9EA0FF;
     padding: 60px;
     border-radius: 20px;
@@ -61,7 +61,6 @@ h1 {
     position: absolute;
     top: 0;
     right: 0;
-
 }
 
 .change-btn {
@@ -70,12 +69,12 @@ h1 {
     font-weight: 500;
     font-family: Helvetica, Arial, sans-serif;
     color: #213547;
-
 }
 
 .exit-btn:hover, .change-btn:hover {
     box-shadow: 4px 4px 2px #213547;
 }
+
 .exit-btn:active, .change-btn:active {
     box-shadow: 2px 2px 4px #213547;
 }
